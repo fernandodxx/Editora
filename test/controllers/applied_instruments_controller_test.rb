@@ -1,10 +1,11 @@
 require "test_helper"
 
 class AppliedInstrumentsControllerTest < ActionDispatch::IntegrationTest
-  setup do 
-    @headers = sign_in(:fernando) 
+  setup do
+    @headers = sign_in(:fernando)
     @evaluated = evaluateds(:sebastiao)
   end
+
   test "should get index" do
     get evaluated_applied_instruments_url(@evaluated), headers: @headers
     assert_response :success
