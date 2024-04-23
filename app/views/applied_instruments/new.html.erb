@@ -1,0 +1,16 @@
+<h1>Aplicar Instrumento</h1>
+
+<%= form_with(model: [@evaluated, @applied_instrument]) do |form| %>
+  <div>
+    <%= form.label :instrument_id, "Selecione um instrumento"%>
+    <%= form.collection_select :instrument_id, Instrument.all, :id, :name, { prompt: "Escolha um instrumento" }, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Aplicar" %>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Voltar para avaliado #{@evaluated.name}", evaluated_path(@evaluated) %>
+</div>

@@ -1,0 +1,13 @@
+<h1>Instrumentos Aplicados</h1>
+
+<div id="applied_instruments">
+  <% @applied_instruments.each do |applied_instrument| %>
+    <p>
+        <strong>Instrumento:</strong><%= link_to_if(applied_instrument.finished?, "#{applied_instrument.instrument.name} - #{l(applied_instrument.created_at, format: :long)}", [@evaluated, applied_instrument]) %>
+    </p>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Voltar para avaliado #{@evaluated.name}", evaluated_path(@evaluated) %>
+</div>

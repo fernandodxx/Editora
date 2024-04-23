@@ -1,0 +1,19 @@
+<div id="<%= dom_id @applied_instrument %>">
+  <p><strong>Nome:</strong> <%= @applied_instrument.instrument.name %></p>
+  
+    <% (1..5).each do |i| %>
+      <p>
+        <strong>Pergunta <%= i %>:</strong> <%= @applied_instrument.instrument.send("question_#{i}") %>
+      </p>
+      
+      <p>
+        <strong>Resposta <%= i %>:</strong> Número <%= @applied_instrument.send("answer_#{i}") %>
+      </p>
+    <% end %>
+  
+  <p><strong>Resultado:</strong> <%= @applied_instrument.result %> pontos.</p>
+</div>
+
+<div>
+  <%= link_to "Voltar para instrumentos aplicados", evaluated_applied_instruments_path(@evaluated) %>
+</div>

@@ -1,15 +1,6 @@
-<%= form_with(model: evaluated) do |form| %>
-  <% if evaluated.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(evaluated.errors.count, "error") %> proibiram que este avaliado fosse salvo:</h2>
+<h1>Questionário</h1>
 
-      <ul>
-        <% evaluated.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with(model: @applied_instrument.evaluated, url: evaluations_step_one_path(@applied_instrument.signed_id)) do |form| %>
 
   <div>
     <%= form.label :name, "Nome", style: "display: block" %>
@@ -32,6 +23,7 @@
   </div>
 
   <div>
-    <%= form.submit "Salvar" %>
+    <%= form.submit "Proximo →" %>
   </div>
+
 <% end %>

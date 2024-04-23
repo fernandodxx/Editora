@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Evaluateds</h1>
+<h1>Avaliados</h1>
 
 <div id="evaluateds">
   <% @evaluateds.each do |evaluated| %>
     <%= render evaluated %>
     <p>
-      <%= link_to "Show this evaluated", evaluated %>
+      <%= link_to "Mostrar este avaliado", evaluated %>
     </p>
+    <hr>
   <% end %>
 </div>
 
-<%= link_to "New evaluated", new_evaluated_path %>
+<%= link_to "Novo avaliado", new_evaluated_path %>

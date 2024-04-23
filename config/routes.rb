@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  resources :evaluateds
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  root "evaluateds#index"
+
+  resources :evaluateds do
+    resources :applied_instruments, only: %i[ index new show create ]
+  end
+
+  namespace :evaluations do
+    resources :step_one, only: %i[ show update ]
+    resources :step_two, only: %i[ show update ]
+  end
+  
 end

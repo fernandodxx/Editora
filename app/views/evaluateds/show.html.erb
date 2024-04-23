@@ -3,8 +3,10 @@
 <%= render @evaluated %>
 
 <div>
-  <%= link_to "Edit this evaluated", edit_evaluated_path(@evaluated) %> |
-  <%= link_to "Back to evaluateds", evaluateds_path %>
-
-  <%= button_to "Destroy this evaluated", @evaluated, method: :delete %>
+  <%= link_to "Listar instrumentos applicados", evaluated_applied_instruments_path(@evaluated) %> | 
+  <%= link_to "Aplicar instrumento", new_evaluated_applied_instrument_path(@evaluated) %>
+  <%= link_to "Alterar este avaliado", edit_evaluated_path(@evaluated) %> | 
+  <%= button_to "Apagar avaliado", @evaluated, method: :delete %>
+  <%= link_to "Voltar para avaliados", evaluateds_path %>
 </div>
+
