@@ -4,8 +4,17 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  name: Perfil de personalidade 1
+  question_1: Qual sua cor favorita? 1-Verde; 2-Azul; 3-Rosa; 4-Branco
+  question_2: Qual seu heroi favorito da marvel? 1-Deadpool; 2-Thor; 3-Hulk; 4-Falcão
+  question_3: Qual seu estilo de musica favorito? 1-Rock; 2-Brega; 3-Sertanejo; 4-Forró
+  question_4: Como é sua relação com o alcool? 1 a 4
+  question_5: Como é o seu desempenho escolar? 1 a 4
+two:
+  name: Perfil de personalidade 2
+  question_1: Qual sua comida favorita? 1-Arroz; 2-Pudim; 3-Laranja; 4-Churrasco
+  question_2: Qual foi seu personagem favorito dos teletubies? 1-Dipsy; 2-Laa-Laa; 3-Po; 4-Tinky-Winky
+  question_3: Qual seu estilo de filme favorito? 1-Horror; 2-Aventura; 3-Drama; 4-SciFi
+  question_4: Como é a sua relação com o trabalho? 1 a 4
+  question_5: Como é o seu desempenho no trabalho? 1 a 4

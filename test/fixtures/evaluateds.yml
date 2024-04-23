@@ -1,15 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  cpf: MyString
-  email: MyString
-  birthdate: 2024-04-23
-  psychologist: one
-
-two:
-  name: MyString
-  cpf: MyString
-  email: MyString
-  birthdate: 2024-04-23
-  psychologist: two
+sebastiao:
+  name: Sebastio dos santos
+  cpf: 123.123.123.123-11
+  email: sebastiao@hotmail.com
+  birthdate: 1988-01-01
+  psychologist: fernando
+  

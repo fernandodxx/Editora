@@ -11,5 +11,9 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+
+    def sign_in(user)
+      { "Authorization" => ActionController::HttpAuthentication::Basic.encode_credentials(psychologists(user).user_name, "secret") }
+    end
   end
 end

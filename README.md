@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Comece executando `./bin/setup`, mas saiba que ele não é abrangente e não instalará tudo o que você precisa (como um banco de dados).
 
-Things you may want to cover:
+- Acesse `localhost:3000` no seu navegador.
 
-* Ruby version
+- O nome de usuário padrão é `fernando`, check `db/seeds.rb` para mais detalhes.
 
-* System dependencies
+- Para visualizar o último email enviado acesse http://localhost:3000/rails/mailers/applied_instrument_mailer/invitation.
 
-* Configuration
+- Para resetar o banco de dados use `rails db:reset`.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Para executar os testes use `rails test`.
