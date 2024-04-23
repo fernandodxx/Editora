@@ -13,7 +13,7 @@ class EvaluatedsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_difference("Evaluated.count") do
-      post evaluated_url, params: { evaluated: { name: "Nicolas", cpf: "123.123.123-12", email: "nicolasalmeida123@gmail.com", birthdate: "2004-01-01" } }, headers: @headers
+      post evaluateds_url, params: { evaluated: { name: "Nicolas", cpf: "123.123.123-12", email: "nicolasalmeida123@gmail.com", birthdate: "2004-01-01" } }, headers: @headers
     end
 
     follow_redirect! headers: @headers

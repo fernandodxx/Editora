@@ -4,40 +4,35 @@
   <% if @applied_instrument.instrument.question_1.present? %>
     <div>
       <p><strong> <%= @applied_instrument.instrument.question_1 %></strong><p>
-      <%= form.label :name, "Resposta 1", style: "display: block" %>
-      <%= form.number_field :answer_1, required: true, min: 1, max: 4 %>
+       <%= form.collection_radio_buttons :answer_1, 1..4, :itself, :itself, {}, { required: true } %>
     </div>
   <% end %>
 
   <% if @applied_instrument.instrument.question_2.present? %>
     <div>
       <p><strong> <%= @applied_instrument.instrument.question_2 %></strong><p>
-      <%= form.label :name, "Resposta 2", style: "display: block" %>
-      <%= form.number_field :answer_2, required: true, min: 1, max: 4 %>
+      <%= form.collection_radio_buttons :answer_2, 1..4, :itself, :itself, {}, { required: true } %>
     </div>
   <% end %>
 
   <% if @applied_instrument.instrument.question_3.present? %>
     <div>
       <p><strong> <%= @applied_instrument.instrument.question_3 %></strong><p>
-      <%= form.label :name, "Resposta 3", style: "display: block" %>
-      <%= form.number_field :answer_3, required: true, min: 1, max: 4 %>
+      <%= form.collection_radio_buttons :answer_3, 1..4, :itself, :itself, {}, { required: true } %>
     </div>
   <% end %>
 
   <% if @applied_instrument.instrument.question_4.present? %>
     <div>
       <p><strong> <%= @applied_instrument.instrument.question_4 %></strong><p>
-      <%= form.label :name, "Resposta 4", style: "display: block" %>
-      <%= form.number_field :answer_4, required: true, min: 1, max: 4 %>
+      <%= form.collection_radio_buttons :answer_4, 1..4, :itself, :itself, {}, { required: true } %>
     </div>
   <% end %>
 
   <% if @applied_instrument.instrument.question_5.present? %>
     <div>
       <p><strong> <%= @applied_instrument.instrument.question_5 %></strong><p>
-      <%= form.label :name, "Resposta 5", style: "display: block" %>
-      <%= form.number_field :answer_5, required: true, min: 1, max: 4 %>
+      <%= form.collection_radio_buttons :answer_5, 1..4, :itself, :itself, {}, { required: true } %>
     </div>
   <% end %>
 

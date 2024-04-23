@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  evaluated_user: sebastiao
+  evaluated: sebastiao
   instrument: one
   answer_1: 1
   answer_2: 2
@@ -14,7 +14,7 @@ one:
   answer_5: 4
   finished: true
 two:
-  evaluated_user: sebastiao
+  evaluated: sebastiao
   instrument: two
   answer_1: 1
   answer_2: 2
