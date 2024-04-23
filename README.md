@@ -11,3 +11,5 @@
 - Para resetar o banco de dados use `rails db:reset`.
 
 - Para executar os testes use `rails test`.
+- 
+- [Gravação de tela de 23-04-2024 17:37:07.webm](https://github.com/fernandodxx/Editora/assets/64704408/73410208-1b08-4027-ab8a-68fc9aae892b)
