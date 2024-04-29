@@ -2,6 +2,8 @@ class AppliedInstrument < ApplicationRecord
   belongs_to :evaluated
   belongs_to :instrument
 
+  scope :finished, -> { where finished: true }
+
   POINTS_MAPPING = { 1 => 3, 2 => 2, 3 => 1, 4 => 0 }
 
   def result

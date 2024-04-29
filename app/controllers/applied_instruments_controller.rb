@@ -1,14 +1,12 @@
 class AppliedInstrumentsController < ApplicationController
   include EvaluatedScoped
- 
-  before_action :set_applied_instrument, only: :show
-  before_action :ensure_can_see_results, only: :show
 
   def index
     @applied_instruments = @evaluated.applied_instruments
   end
 
   def show
+    @applied_instrument = @evaluated.applied_instruments.finished.find(params[:id])
   end
 
   def new
@@ -23,14 +21,6 @@ class AppliedInstrumentsController < ApplicationController
   end
 
   private
-
-    def set_applied_instrument
-      @applied_instrument = @evaluated.applied_instruments.find(params[:id])
-    end
-
-    def ensure_can_see_results
-      head :not_found unless @applied_instrument.finished?
-    end
 
     def applied_instrument_params
       params.require(:applied_instrument).permit(:instrument_id)

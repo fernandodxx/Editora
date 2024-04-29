@@ -17,19 +17,12 @@ class EvaluatedsController < ApplicationController
 
   def create
     @evaluated = Current.user.evaluateds.create!(evaluated_params)
-
-    if @evaluated.save
-      redirect_to @evaluated, notice: "Avaliado criado com sucesso."
-    else
-      render :new, status: :unprocessable_entity
-    end
+    redirect_to @evaluated, notice: "Avaliado criado com sucesso."
   end
 
   def update
     if @evaluated.update(evaluated_params)
       redirect_to @evaluated, notice: "Avaliado alterado com sucesso.", status: :see_other
-    else
-      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -39,12 +32,11 @@ class EvaluatedsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_evaluated
       @evaluated = Current.user.evaluateds.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def evaluated_params
       params.require(:evaluated).permit(:name, :cpf, :email, :birthdate)
     end
