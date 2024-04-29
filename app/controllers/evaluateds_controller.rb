@@ -28,7 +28,7 @@ class EvaluatedsController < ApplicationController
 
   def destroy
     @evaluated.destroy!
-    redirect_to @evaluated, notice: "Avaliado apagado com sucesso.", status: :see_other
+    redirect_to evaluateds_url, notice: "Avaliado apagado com sucesso.", status: :see_other
   end
 
   private
