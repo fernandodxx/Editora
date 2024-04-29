@@ -21,9 +21,8 @@ class EvaluatedsController < ApplicationController
   end
 
   def update
-    if @evaluated.update(evaluated_params)
-      redirect_to @evaluated, notice: "Avaliado alterado com sucesso.", status: :see_other
-    end
+    @evaluated.update! evaluated_params
+    redirect_to @evaluated, notice: "Avaliado alterado com sucesso.", status: :see_other
   end
 
   def destroy
